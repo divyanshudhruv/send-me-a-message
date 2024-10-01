@@ -69,22 +69,22 @@ export async function getIP() {
       console.log("Your IP Address:", ip);
       console.log(" ");
 
-      // Fetch location details using ip-api
-      const locationResponse = await fetch(`https://ip-api.com/json/${ip}`);
+      // Fetch location details using ipapi.co
+      const locationResponse = await fetch(`https://ipapi.co/${ip}/json/`);
       const locationData = await locationResponse.json();
 
       // Extract latitude and longitude
-      latitude = locationData.lat;
-      longitude = locationData.lon;
-      zip = locationData.zip; // Get zip code if available
+      latitude = locationData.latitude; // Change to 'latitude' to match ipapi.co response
+      longitude = locationData.longitude; // Change to 'longitude' to match ipapi.co response
+      zip = locationData.postal; // Get postal code if available
       city = locationData.city; // Extract city
-      state = locationData.regionName;
+      state = locationData.region; // Adjust to match ipapi.co response
 
       console.log("Location Data:", locationData);
       console.log("");
       console.log("Latitude:", latitude);
       console.log("Longitude:", longitude);
-      console.log("Zip Code:", zip); // Log zip code
+      console.log("Zip Code:", zip); // Log postal code
       console.log(" ");
 
       // Attempt to get the user's current geolocation
@@ -131,7 +131,6 @@ export async function getIP() {
     console.log(" ");
   }
 }
-
 
 // Function to save data to localStorage (not updated)
 async function saveDataToLocalStorage() {
