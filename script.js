@@ -47,7 +47,7 @@ function isEmptyOrSpaces(str) {
 // Usage
 
 // Main function to get IP and location data
-async function getIP() {
+export async function getIP() {
   try {
     name = document.getElementById("name").value;
     message = document.getElementById("message").value;
@@ -132,7 +132,6 @@ async function getIP() {
   }
 }
 
-export { getIP };
 
 // Function to save data to localStorage (not updated)
 async function saveDataToLocalStorage() {
