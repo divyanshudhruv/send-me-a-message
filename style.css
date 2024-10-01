@@ -1,0 +1,453 @@
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #374157 #1D232A;
+}*/
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: FigtreeFont;
+  src: url(fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Poppins300;
+  src: url(/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Poppins400;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins500;
+  src: url(/fonts/Poppins-Medium.ttf);
+}
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 11px;
+  width: 13px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #2a323c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #272f39;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #272f39;
+}
+
+body {
+  display: flex;
+  background-color: #1d232a;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.svgImg {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.table-text .button-edit:hover {
+  background-color: #fd454f;
+}
+
+.back-to-home {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 53px;
+  height: 53px;
+  background-color: #2a323c;
+  color: #858b97;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.back-to-home:hover {
+  background-color: #2a3039;
+}
+
+.message-container .text-top {
+  display: flex;
+  position: relative;
+  font-family: "Figtree";
+  font-weight: 900;
+  color: #a6adbb;
+  font-size: 58px;
+  width: 435px;
+  height: 100px;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: none;
+}
+
+.message-container .text-bottom {
+  display: flex;
+  position: relative;
+  font-family: "Figtree";
+  font-weight: lighter;
+  color: #595f6a;
+  font-size: 24px;
+  width: 85vw;
+  height: 100px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  align-self: center;
+  background-color: none;
+}
+
+.message-container .buttonContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 725px;
+  height: 600px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.message-container::placeholder {
+  color: #858b97 !important;
+}
+
+.message-container .input {
+  display: flex;
+  position: relative;
+  width: 350px;
+  height: 63px;
+  background-color: #2a323c;
+  padding-inline: 30px !important;
+  border-radius: 500px;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-smooth: smooth;
+  letter-spacing: 0.25px;
+  color: #858b97;
+  cursor: text;
+  transition: 0.3s;
+}
+.message-container .input:hover {
+  background-color: #2a3039;
+}
+.message-container .button-send {
+  display: flex;
+  position: relative;
+  width: 350px;
+  height: 63px;
+  background-color: #7289da;
+  padding-inline: 10px;
+  border-radius: 500px;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-smooth: smooth;
+  letter-spacing: 0.25px;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  text-decoration: none;
+}
+
+.message-container .button-send:hover {
+  background-color: #637fe5;
+}
+
+.message-container .button-send:active {
+  background-color: #476bec;
+}
+.message-container .button-edit {
+  display: flex;
+  position: relative;
+  width: 350px;
+  height: 63px;
+  background-color: #ff5861;
+  padding-inline: 10px;
+  border-radius: 500px;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-smooth: smooth;
+  letter-spacing: 0.25px;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.message-container .button-edit:hover {
+  background-color: #fd454f;
+}
+.message-container {
+  display: flex;
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  max-height: 540px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.message-container .text-message {
+  display: flex;
+  position: relative;
+  width: 350px;
+  min-width: 350;
+  min-height: 350px;
+  max-width: 350px;
+  background-color: #2a323c;
+  padding-inline: 30px !important;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-smooth: smooth;
+  letter-spacing: 0.25px;
+  color: #858b97;
+  cursor: text;
+  transition: 0.3s;
+  padding-top: 30px;
+}
+
+.message-container .text-message:hover {
+  background-color: #2a3039;
+}
+.message-container .input:hover {
+  background-color: #2a3039;
+}
+
+.message-container .form {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 415px;
+  height: 100%;
+  max-height: 595px;
+  flex-wrap: wrap;
+  top: 0;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 450px) {
+  /* body {
+    background-color: lightblue !important;
+  } */
+  .message-container {
+    display: flex;
+    position: relative !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: calc(100vh);
+    height: 750px;
+    max-height: fit-content !important;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .back-to-home {
+    display: none;
+  }
+  .message-container .text-message {
+    display: flex;
+    position: relative;
+    width: 350px;
+    min-height: 350px;
+    max-width: 350px;
+    background-color: #2a323c;
+    padding-inline: 30px !important;
+    border-radius: 27.5px;
+    outline: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-smooth: smooth;
+    letter-spacing: 0.25px;
+    color: #858b97;
+    cursor: text;
+    transition: 0.3s;
+    padding-top: 30px;
+    resize: none;
+  }
+  .message-container .input:hover {
+    background-color: #2a3039;
+  }
+
+  .message-container .form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 415px;
+    min-height: 575px;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    zoom: 0;
+    overflow-x: hidden;
+    scale: 0.999888;
+  }
+  .table-container {
+    position: relative; /* Position relative for the pseudo-element */
+    max-height: 300px; /* Set the max height for scrolling */
+    max-width: 520px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+    z-index: 1; /* Stack order */
+    border-radius: 12px !important;
+    overflow-x: auto;
+    margin-bottom: 100px;
+  }
+}
+
+/* Hide scrollbar for WebKit browsers */
+.table-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and other WebKit browsers */
+}
+
+@media only screen and (max-width: 850px) and (min-width: 406px) {
+  .message-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    height: 750px;
+    max-height: 750px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 100px !;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 406px) {
+  .back-to-home {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 405px) and (min-width: 350px) {
+  body {
+    zoom: 0.899999; /* a little accurate but still simple*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  body {
+    zoom: 0.699999; /* a little accurate but still simple*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+@media only screen and (max-height: 560px) and (max-width: 20000px) {
+  .message-container {
+    height: calc(700px);
+    flex-direction: row;
+    width: fit-content;
+    margin-top: 0px;
+    width: 440px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    flex-direction: row;
+    margin-top: 50px !important;
+    margin-bottom: 0;
+  }
+
+  body {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-height: 655px) and (max-width: 900px) {
+  .back-to-home {
+    display: none;
+  }
+}
