@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Send me A message </title>
+    <style></style>
+</head>
+
+<body>
+    <div class="message-container" id="message-container">
+        <div class="text-top">Message?</div>
+        <div class="text-bottom"  style="width: calc(400px);">
+            Send me a message. I'll be in touch with you all. PROMISE !!
+        </div>
+
+        <div class="form" id="form">
+            <input class="input" id="name" placeholder="name (anonymous)">
+            <textarea class="text-message" id="message" type placeholder="message"
+                style="resize: none !important;"></textarea>
+            <div class="button-send" id="send">send<svg class="svgImg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                    </path>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <a href="index.html">
+        <div class="back-to-home" id="back-to-home"><svg class="svgImg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block "
+                style="margin-right: 8px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M 6 9 L 3 12 M 3 12 L 6 15 M 21 12 H 3"></path>
+            </svg></div>
+    </a>
+
+    <div class="database-info" id="database-info"></div> <!--Not configured-->
+
+    <script type="module">
+        import { getIP } from "/script.js"; // Path
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const fetchIpButton = document.getElementById("send");
+            fetchIpButton.addEventListener("click", () => {
+                getIP();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
