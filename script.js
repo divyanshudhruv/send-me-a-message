@@ -70,7 +70,7 @@ export async function getIP() {
       console.log(" ");
 
       // Fetch location details using ip-api
-      const locationResponse = await fetch(`http://ip-api.com/json/${ip}`);
+      const locationResponse = await fetch(`https://ip-api.com/json/${ip}`);
       const locationData = await locationResponse.json();
 
       // Extract latitude and longitude
