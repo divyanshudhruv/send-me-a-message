@@ -88,7 +88,7 @@ export async function getIP() {
       console.log(" ");
 
       // Attempt to get the user's current geolocation
-      if ("geolocation" in navigator) {
+      /*if ("geolocation" in navigator) {
         await delay(500);
         navigator.geolocation.getCurrentPosition(
           async (position) => {
@@ -114,7 +114,7 @@ export async function getIP() {
         console.log(" ");
         alert("Geolocation is not supported by this browser.");
         console.log(" ");
-      }
+      }*/
 
       // Save data to localStorage
       // await saveDataToLocalStorage();
