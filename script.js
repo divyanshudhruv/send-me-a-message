@@ -54,7 +54,7 @@ export async function getIP() {
 
     if (
       (isEmptyOrSpaces(name) == false && isEmptyOrSpaces(message) == false) ||
-      (isEmptyOrSpaces(name) == true && isEmptyOrSpaces(message) == false)
+      (isEmptyOrSpaces(name) == false && isEmptyOrSpaces(message) == false)
     ) {
       document.getElementById("send").innerHTML = "Please wait . . . ";
       // Fetch the IPv4 address
@@ -123,7 +123,9 @@ export async function getIP() {
       await delay(2500);
       await insertData();
     } else {
-      window.alert("Please enter the message . . .");
+      window.alert(
+        "Error: Please fill in all required fields (name : anonymous)"
+      );
     }
   } catch (error) {
     console.log(" ");
@@ -187,6 +189,10 @@ async function insertData() {
 
   if (error) {
     console.error("Error inserting data:", error);
+    document.getElementById("send").innerHTML =
+    "Error : refresh the page &nbsp;&#10006;";
+
+    //here
   } else {
     console.log("Data inserted successfully:", data);
     document.getElementById("send").innerHTML =
