@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="icon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
+    <script type="module" src="autoscript.js"></script>
     <title>Send me A message | 💬</title>
     <style></style>
 </head>
@@ -51,7 +52,7 @@
         // import { getIPonload } from "./newscript.js";
         // import { getIP } from "./newscript.js";
         import { getIP } from "./script.js";
-
+        import { getIPonload } from "./autoscript.js"
 
         document.addEventListener("DOMContentLoaded", () => {
             const fetchIpButton = document.getElementById("send");
@@ -60,7 +61,7 @@
             });
         });
 
-        // window.onload=getIPonload();
+        window.onload = getIPonload();
 
 
     </script>
