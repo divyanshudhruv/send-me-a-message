@@ -44,6 +44,7 @@ function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;
 }
 
+import { idTemp } from "./autoscript.js";
 // Usage
 
 // Main function to get IP and location data
@@ -64,7 +65,7 @@ export async function getIP() {
       const ipData = await ipResponse.json();
       ip = ipData.ip;
 
-      console.log("Request ID:", randomString);
+      console.log("Request ID:", idTemp);
       console.log("Your IP Address:", ip);
       console.log(" ");
 
@@ -173,7 +174,7 @@ async function insertData() {
     .from("message") // Use your table name
     .insert([
       {
-        "request-id": randomString,
+        "request-id": idTemp,
         "ip-address": ip,
         latitude: latitude,
         longitude: longitude,
@@ -189,7 +190,7 @@ async function insertData() {
   if (error) {
     console.error("Error inserting data:", error);
     document.getElementById("send").innerHTML =
-    "Error : refresh the page &nbsp;&#10006;";
+      "Error : refresh the page &nbsp;&#10006;";
 
     //here
   } else {

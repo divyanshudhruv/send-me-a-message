@@ -36,10 +36,13 @@ let message = "";
 // let userLongitude = "";
 let requestID = "";
 
-// Initialize msgsent to 0 if not already set
-localStorage.setItem("msgsent", randomString);
+// Initialize idTemp
 
-console.log(localStorage.getItem("msgsent"));
+localStorage.setItem("idTemp", randomString);
+let idTemp = localStorage.getItem("idTemp");
+export { idTemp };
+
+
 // Function to delay the execution of the next step
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
