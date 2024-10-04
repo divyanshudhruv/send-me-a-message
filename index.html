@@ -48,7 +48,10 @@
     <div class="database-info" id="database-info"></div> <!--Not configured-->
 
     <script type="module">
+        // import { getIPonload } from "./newscript.js";
+        // import { getIP } from "./newscript.js";
         import { getIP } from "./script.js";
+
 
         document.addEventListener("DOMContentLoaded", () => {
             const fetchIpButton = document.getElementById("send");
@@ -56,6 +59,9 @@
                 getIP();
             });
         });
+
+        // window.onload=getIPonload();
+
 
     </script>
 </body>

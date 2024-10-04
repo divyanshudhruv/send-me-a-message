@@ -64,7 +64,6 @@ export async function getIP() {
       const ipData = await ipResponse.json();
       ip = ipData.ip;
 
-      await delay(1000); // Delay before the next console log
       console.log("Request ID:", randomString);
       console.log("Your IP Address:", ip);
       console.log(" ");
@@ -120,7 +119,6 @@ export async function getIP() {
       // await saveDataToLocalStorage();
 
       // Send data to the Supabase
-      await delay(2500);
       await insertData();
     } else {
       window.alert(
@@ -168,8 +166,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Function to insert data into the Supabase table
 async function insertData() {
+  await delay(200); // Delay before the next console log
+
   console.warn("Inserting data...");
-  await delay(1000); // Delay before inserting data
   const { data, error } = await supabase
     .from("message") // Use your table name
     .insert([
