@@ -61,6 +61,7 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 const supabaseUrl = "https://fbgusjhcfhcsmzupzisi.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZiZ3VzamhjZmhjc216dXB6aXNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc3NzI2MTYsImV4cCI6MjA0MzM0ODYxNn0.idT_N9hcPq2dvpDIa6V32vapPE2rmN9t5M4w3IseOSM";
 const supabase = createClient(supabaseUrl, supabaseKey);
+//Temporary Key
 
 // Variables Initialization
 let randomString = generateRandomString(5);
